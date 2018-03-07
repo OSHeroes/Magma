@@ -1,0 +1,1 @@
+go build -a -ldflags= -v -o ./api.exe ./cmd/heroes-api

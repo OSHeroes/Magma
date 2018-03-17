@@ -42,7 +42,7 @@ func (s *Server) ServeHTTP(bind string, r http.Handler) {
 		Handler:      r,
 		ErrorLog:     log.New(os.Stderr, "HTTP: ", 0),
 		ReadTimeout:  5 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		WriteTimeout: 10 * time.Second, //todo check timeouts
 		IdleTimeout:  60 * time.Second,
 	}
 
@@ -55,7 +55,7 @@ func (s *Server) ServeTLS(bind string, certPath, pemPath string, r http.Handler)
 		Addr:         bind,
 		Handler:      r,
 		ErrorLog:     log.New(os.Stderr, "TLS: ", 0),
-		ReadTimeout:  5 * time.Second,
+		ReadTimeout:  5 * time.Second, //todo check timeouts
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}

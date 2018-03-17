@@ -1,6 +1,11 @@
-# heroes-api
+# MagmaServer
 
-Heroes API handles REST requests from the game client and server.
+MagmaServer handles REST requests from the game client and server.
+It is another framework used for login/store and more
+It can be use by both BFHeroes , and BFPlay4Free ( and more ?)
+
+there is also "PLASMA" framework which we don't know how to make it work at the moment
+used in the past by bf2bc
 
 ## Configuration
 
@@ -25,6 +30,7 @@ Currently golang dependencies are resolved thanks to [glide](https://github.com/
 Packages stored in `vendor` directory SHOULD NOT be pushed to the repository.
 
 ```bash
+glide init
 glide install
 ```
 
@@ -35,20 +41,6 @@ go build -o heroes-api cmd/heroes-api/main.go && ./heroes-api
 ```
 
 It will load `.env` file by default.
-
-#### Linux
-
-As a std user (with a custom config file):
-
-```bash
-go build -o heroes-api cmd/heroes-api/main.go && ./heroes-api --config dev.env
-```
-
-As a root user:
-
-```bash
-go build -o heroes-api cmd/heroes-api/main.go && sudo -H ./heroes-api
-```
 
 #### Windows
 
@@ -68,4 +60,6 @@ Note: PowerShell has one big advantage over other terminal in Windows - text col
 
 ## Credits
 
-This repository was based on the implementation, which can be found in `github.com/HeroesAwaken/GoFesl`.
+This was created by mea and a friend of mine called "neqnil" based on BF2MASE backend, from the1domo ,freaky123(they recorded live traffic) . And using the implemenation and research from Aluigi
+
+THERE IS NO LICENSE , YOU CAN DO WHATEVER YOU WANT WITH THIS CODE BY THE TIME YOU DOWNLOAD IT

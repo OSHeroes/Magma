@@ -7,10 +7,10 @@ import (
 
 var (
 	// It is ID of the player (Nucleus ID).
-	nucleusID = "2"
+	nucleusID = "1"
 
 	// serverName is the name of the server.
-	serverName = "Test-Server"
+	serverName = "MargeSimpson"
 )
 
 func StartTestServer(h http.Handler) *httptest.Server {
@@ -21,7 +21,7 @@ func StartTestServer(h http.Handler) *httptest.Server {
 }
 
 func SetCommonTestHeaders(req *http.Request) {
-	req.Header.Set("Host", "example.com")
+	req.Header.Set("Host", "dev2.battlefieldheroes.com")
 	req.Header.Set("Cache-Control", "no-cache")
 	req.Header.Set("Connection", "Keep-Alive")
 	req.Header.Set("Pragma", "no-cache")

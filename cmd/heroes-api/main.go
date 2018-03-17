@@ -33,11 +33,6 @@ func main() {
 		config.Config.PrivateKeyPath,
 	)
 
-	// TODO: Add "github.com/google/gops/agent" to analyze resources
-	// if err := agent.Listen(&agent.Options{}); err != nil {
-	// 	logrus.Fatal(err)
-	// }
-
 	logrus.Info("Listening API requests")
 	<-ctx.Done()
 	logrus.Info("Exiting...")

@@ -1,9 +1,0 @@
-package: gitlab.com/go-heroes/heroes-api
-import:
-- package: github.com/go-chi/chi
-  subpackages:
-  - middleware
-- package: github.com/go-chi/render
-- package: github.com/kelseyhightower/envconfig
-- package: github.com/sirupsen/logrus
-- package: github.com/subosito/gotenv

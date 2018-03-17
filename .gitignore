@@ -11,6 +11,5 @@
 *.out
 
 # Repository-specific
-.env
 dev.env
 vendor

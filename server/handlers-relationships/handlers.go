@@ -3,7 +3,7 @@ package relationships
 import (
 	"net/http"
 
-	"gitlab.com/go-heroes/heroes-api/tpl"
+	"github.com/Synaxis/bfheroesMagma/tpl"
 
 	"github.com/go-chi/chi"
 )

@@ -7,8 +7,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/subosito/gotenv"
 
-	"gitlab.com/go-heroes/heroes-api/config"
-	"gitlab.com/go-heroes/heroes-api/server"
+	"github.com/Synaxis/bfheroesMagma/config"
+	"github.com/Synaxis/bfheroesMagma/server"
 )
 
 var (

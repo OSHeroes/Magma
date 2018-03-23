@@ -2,7 +2,7 @@ package game
 
 import (
 	"github.com/go-chi/chi"
-	"gitlab.com/go-heroes/heroes-api/tpl"
+	"github.com/Synaxis/bfheroesMagma/tpl"
 )
 
 type Controller struct {

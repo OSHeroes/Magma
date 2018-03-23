@@ -3,7 +3,7 @@ package game
 import (
 	"net/http"
 
-	"gitlab.com/go-heroes/heroes-api/tpl"
+	"github.com/Synaxis/bfheroesMagma/tpl"
 )
 
 func (c *Controller) store(w http.ResponseWriter, r *http.Request) {

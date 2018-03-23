@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi"
-	"gitlab.com/go-heroes/heroes-api/server/auth"
-	"gitlab.com/go-heroes/heroes-api/tpl"
+	"github.com/Synaxis/bfheroesMagma/server/auth"
+	"github.com/Synaxis/bfheroesMagma/tpl"
 )
 
 type dtSession struct {

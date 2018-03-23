@@ -7,11 +7,11 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/sirupsen/logrus"
 
-	dc "gitlab.com/go-heroes/heroes-api/server/handlers-dc"
-	game "gitlab.com/go-heroes/heroes-api/server/handlers-game"
-	nucleus "gitlab.com/go-heroes/heroes-api/server/handlers-nucleus"
-	ofb "gitlab.com/go-heroes/heroes-api/server/handlers-ofb"
-	relationships "gitlab.com/go-heroes/heroes-api/server/handlers-relationships"
+	dc "github.com/Synaxis/bfheroesMagma/server/handlers-dc"
+	game "github.com/Synaxis/bfheroesMagma/server/handlers-game"
+	nucleus "github.com/Synaxis/bfheroesMagma/server/handlers-nucleus"
+	ofb "github.com/Synaxis/bfheroesMagma/server/handlers-ofb"
+	relationships "github.com/Synaxis/bfheroesMagma/server/handlers-relationships"
 )
 
 func (s *Server) registerRoutes() http.Handler {

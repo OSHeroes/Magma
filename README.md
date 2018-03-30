@@ -4,8 +4,8 @@ MagmaServer handles REST requests from the game client and server.
 It is another framework used for login/store and more
 It can be use by both BFHeroes , and BFPlay4Free ( and more ?)
 
-there is also "PLASMA" framework which we don't know how to make it work at the moment
-used in the past by bf2bc
+there is also "PLASMA" framework which we don't know how to make it (not docummented)
+at the moment (or maybe just a weird name for Server ? ) 
 
 ## Configuration
 
@@ -61,5 +61,3 @@ Note: PowerShell has one big advantage over other terminal in Windows - text col
 ## Credits
 
 This was created by mea and a friend of mine called "neqnil" based on BF2MASE backend, from the1domo ,freaky123(they recorded live traffic) . And using the implemenation and research from Aluigi
-
-THERE IS NO LICENSE , YOU CAN DO WHATEVER YOU WANT WITH THIS CODE BY THE TIME YOU DOWNLOAD IT

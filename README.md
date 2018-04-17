@@ -11,55 +11,31 @@ at the moment (or maybe just a weird name for Server ? )
 
 ## Configuration
 
-Below there is table with all enviroment variables which are used by the `heroes-api`.
-You can take a glance at `config/config.go` file if you need more information about specific variable.
-
-Instead of editing `~/bashrc` you may create a `.env` file and insert there configuration of your choice.
-Optionally, you can provide a custom path to a `.env` file by providing `--config` flag (i.e. `./backend --config dev.env`).
+Below there is table with the config variables used by the `Magma`.
+Please check ./config.go for more Info
 
 | Name               | Default value   |
 |--------------------|-----------------|
-| `LOG_LEVEL`        | `DEBUG`         |
-| `HTTP_BIND`        | `127.0.0.1:80`  |
+| `LOG_LEVEL`        | `debug`         |
+| `HTTP_BIND`        | `127.0.0.1:80`  |//you can use 8080
 | `HTTPS_BIND`       | `127.0.0.1:443` |
-| `CERT_PATH`        |                 |
-| `PRIVATE_KEY_PATH` |                 |
+| `CERT_PATH`        | ./fixtures      |
+| `PRIVATE_KEY_PATH` | ./fixtures      |
 
 ### Dependencies
-
-Currently golang dependencies are resolved thanks to [glide](https://github.com/Masterminds/glide).
-
-Packages stored in `vendor` directory SHOULD NOT be pushed to the repository.
+Golang dependencies are resolved thanks to [glide](https://github.com/Masterminds/glide).
 
 ```bash
 glide init
 glide install
 ```
 
-### Start
-
-```bash
-go build -o heroes-api cmd/heroes-api/main.go && ./heroes-api
-```
-
-It will load `.env` file by default.
+### How to Compile
 
 #### Windows
 
-Unfortunately, Windows is not really great for running any console-based applications, but if you use `powershell` you might also appreciate following command:
-
-```powershell
-go build -o heroes-api.exe cmd/heroes-api/main.go ; if ($?) { .\heroes-api.exe }
-```
-
-Or following if you are using custom `.env` file:
-
-```powershell
-go build -o heroes-api.exe cmd/heroes-api/main.go ; if ($?) { .\heroes-api.exe --config .dev.env }
-```
-
-Note: PowerShell has one big advantage over other terminal in Windows - text coloring of logs.
+=>run build.bat (remember change your IP inside ./config.go)
 
 ## Credits
 
-This was created by mea and a friend of mine called "neqnil" based on BF2MASE backend, from the1domo ,freaky123(they recorded live traffic) . And using the implemenation and research from Aluigi
+This was created by Synaxis and "neqnil" based on BF2BC backend, from the1domo ,freaky123(they recorded live traffic) .And using the implemenation and research from Aluigi. Also credits to MakaHost and mDawg

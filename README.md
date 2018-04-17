@@ -3,8 +3,8 @@
   like ¨yourGoWorkspace¨/src/github.com/Synaxis/bfheroesMagma``
 
 MagmaServer handles REST requests from the game client and server.
-It is another framework used for login/store and more
-It can be use by both BFHeroes , and BFPlay4Free ( and more ?)
+It is another framework used for login/store/inventoryList/XML retrieving and more
+It can be used by both BFHeroes and BFPlay4Free
 
 there is also "PLASMA" framework which we don't know how to make it (not docummented)
 at the moment (? ) 
@@ -23,15 +23,13 @@ Please check ./config.go for more Info
 | `PRIVATE_KEY_PATH` | ./fixtures      |
 
 ### Dependencies
-Golang dependencies are resolved thanks to [glide](https://github.com/Masterminds/glide).
+Golang dependencies are resolved with [glide](https://github.com/Masterminds/glide).
 
+### How to Compile
 ```bash
 glide init
 glide install
 ```
-
-### How to Compile
-
 #### Windows
 
 ```=>run build.bat (remember change your IP inside ./config.go)```

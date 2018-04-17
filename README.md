@@ -7,7 +7,7 @@ It is another framework used for login/store and more
 It can be use by both BFHeroes , and BFPlay4Free ( and more ?)
 
 there is also "PLASMA" framework which we don't know how to make it (not docummented)
-at the moment (or maybe just a weird name for Server ? ) 
+at the moment (? ) 
 
 ## Configuration
 

@@ -1,4 +1,6 @@
 # MagmaServer
+``Import Packages are broken at the moment , Download and place the whole folder in your GOPATH
+  like ¨yourGoWorkspace¨/src/github.com/Synaxis/bfheroesMagma``
 
 MagmaServer handles REST requests from the game client and server.
 It is another framework used for login/store and more

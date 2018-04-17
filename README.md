@@ -34,7 +34,7 @@ glide install
 
 #### Windows
 
-=>run build.bat (remember change your IP inside ./config.go)
+```=>run build.bat (remember change your IP inside ./config.go)```
 
 ## Credits
 

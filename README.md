@@ -29,6 +29,7 @@ Golang dependencies are resolved with [glide](https://github.com/Masterminds/gli
 ```bash
 glide init
 glide install
+go build -a -ldflags= -v -o ./magma.exe ./cmd/heroes-api
 ```
 #### Windows
 

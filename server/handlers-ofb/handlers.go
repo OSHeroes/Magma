@@ -3,7 +3,7 @@ package ofb
 import (
 	"net/http"
 
-	"github.com/Synaxis/bfheroesMagma/tpl"
+	"github.com/Synaxis/Magma/tpl"
 )
 
 func (c *Controller) ofbProducts(w http.ResponseWriter, r *http.Request) {

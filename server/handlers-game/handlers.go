@@ -3,7 +3,7 @@ package game
 import (
 	"net/http"
 
-	"github.com/Synaxis/bfheroesMagma/tpl"
+	"github.com/Synaxis/Magma/tpl"
 )
 
 func (c *Controller) store(w http.ResponseWriter, r *http.Request) {

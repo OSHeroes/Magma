@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi"
-	"github.com/Synaxis/bfheroesMagma/tpl"
+	"github.com/Synaxis/Magma/tpl"
 )
 
 type Controller struct {

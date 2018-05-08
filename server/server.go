@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/Synaxis/bfheroesMagma/tpl"
+	"github.com/Synaxis/Magma/tpl"
 )
 
 var (

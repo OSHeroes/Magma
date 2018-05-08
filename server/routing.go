@@ -7,11 +7,11 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/sirupsen/logrus"
 
-	dc "github.com/Synaxis/bfheroesMagma/server/handlers-dc"
-	game "github.com/Synaxis/bfheroesMagma/server/handlers-game"
-	nucleus "github.com/Synaxis/bfheroesMagma/server/handlers-nucleus"
-	ofb "github.com/Synaxis/bfheroesMagma/server/handlers-ofb"
-	relationships "github.com/Synaxis/bfheroesMagma/server/handlers-relationships"
+	dc "github.com/Synaxis/Magma/server/handlers-dc"
+	game "github.com/Synaxis/Magma/server/handlers-game"
+	nucleus "github.com/Synaxis/Magma/server/handlers-nucleus"
+	ofb "github.com/Synaxis/Magma/server/handlers-ofb"
+	relationships "github.com/Synaxis/Magma/server/handlers-relationships"
 )
 
 func (s *Server) registerRoutes() http.Handler {
@@ -22,8 +22,6 @@ func (s *Server) registerRoutes() http.Handler {
 	r.Use(middleware.RealIP)
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
-//  'nucleus/entitlements/%I64d',0
-//  'ofb/products',0
 //  'nucleus/wallets/%I64d',0
 //  'ofb/purchase/%I64d/%s',0
 //  'nucleus/wallets/%I64d/%s/%d/%s',0

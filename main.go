@@ -7,8 +7,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/subosito/gotenv"
 
-	"github.com/Synaxis/bfheroesMagma/config"
-	"github.com/Synaxis/bfheroesMagma/server"
+	"github.com/Synaxis/Magma/config"
+	"github.com/Synaxis/Magma/server"
 )
 
 var (
@@ -33,7 +33,7 @@ func main() {
 		config.Config.PrivateKeyPath,
 	)
 
-	logrus.Info("Listening API requests")
+	logrus.Info("Listening Magma requests")
 	<-ctx.Done()
 	logrus.Info("Exiting...")
 }
@@ -53,13 +53,7 @@ func initConfig() {
 func initLogger() {
 	logrus.SetLevel(config.LogLevel())
 
-	// logrus.SetFormatter(&logrus.JSONFormatter{
-	// 	DisableTimestamp: true,
-	// })
-
-	// logrus.SetFormatter(new(prefixed.TextFormatter))
-	// logrus.SetFormatter(&prefixed.TextFormatter{
-	// 	DisableTimestamp: true,
-	// 	DisableColors:    true,
-	// })
+	logrus.SetFormatter(&logrus.JSONFormatter{
+	 	DisableTimestamp: true,
+	 })	
 }

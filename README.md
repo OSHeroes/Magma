@@ -5,8 +5,12 @@
 MagmaServer handles REST requests from the game client and server.
 It is another framework used for login/store/inventoryList/XML retrieving and more
 It can be used by both BFHeroes and BFPlay4Free
-
-
+### How to Compile
+```bash
+glide init
+glide install
+go build (remember change your IP inside ./config.go)
+```
 ## Configuration
 
 Below there is table with the config variables used by the `Magma`.
@@ -21,16 +25,8 @@ Please check ./config.go for more Info
 | `PRIVATE_KEY_PATH` | ./fixtures      |
 
 ### Dependencies
-Golang dependencies are resolved with [glide](https://github.com/Masterminds/glide).
-
-### How to Compile
-```bash
-glide init
-glide install
-go build (remember change your IP inside ./config.go)
-```
+Golang dependencies are resolved with [glide](https://github.com/Masterminds/glide)
 
 ## Credits
-
 This was created by Synaxis and "neqnil" based on BF2BC backend,
 credits:the1domo ,freaky123. Aluigi, mDawg

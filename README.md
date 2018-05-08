@@ -27,11 +27,8 @@ Golang dependencies are resolved with [glide](https://github.com/Masterminds/gli
 ```bash
 glide init
 glide install
-go build -a -ldflags= -v -o ./magma.exe ./cmd/heroes-api
+go build (remember change your IP inside ./config.go)
 ```
-#### Windows
-
-```=>go build (remember change your IP inside ./config.go)```
 
 ## Credits
 

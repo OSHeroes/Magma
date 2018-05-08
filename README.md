@@ -29,4 +29,4 @@ Golang dependencies are resolved with [glide](https://github.com/Masterminds/gli
 
 ## Credits
 This was created by Synaxis and "neqnil" based on BF2BC backend,
-credits:the1domo ,freaky123. Aluigi, mDawg
+credits:the1domo ,freaky123. Aluigi, mDawg,Makahost

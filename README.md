@@ -16,8 +16,10 @@ go build
 ```
 ## Configuration
 
-Here's a table with the .env (file) config variables
-Please check ./config.go for more Info
+Here are all the .env (file) config variables
+check ./config.go for more Info
+To create a .env file just type in bash (or gitbash)
+touch .env
 
 | Name               | Default value   |
 |--------------------|-----------------|
@@ -26,6 +28,7 @@ Please check ./config.go for more Info
 | `HTTPS_BIND`       | `127.0.0.1:443` |
 | `CERT_PATH`        | ./fixtures      |
 | `PRIVATE_KEY_PATH` | ./fixtures      |
+
 
 ### Dependencies
 All dependencies are resolved with [glide](https://github.com/Masterminds/glide)

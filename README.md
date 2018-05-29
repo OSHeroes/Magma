@@ -21,18 +21,13 @@ check ./config.go for more Info
 To create a .env file just type in bash (or gitbash)
 touch .env
 
-| Name               | Default value   |
+| Name               | Value           |
 |--------------------|-----------------|
 | `LOG_LEVEL`        | `debug`         |
 | `HTTP_BIND`        | `127.0.0.1:80`  |//you can use 8080
 | `HTTPS_BIND`       | `127.0.0.1:443` |
 | `CERT_PATH`        | ./fixtures      |
 | `PRIVATE_KEY_PATH` | ./fixtures      |
-
-
-### Dependencies
-All dependencies are resolved with [glide](https://github.com/Masterminds/glide)
-
 ## Credits
 This is created by Synaxis and "neqnil" based on BF2BC backend,
 credits: mDawg,Makahost

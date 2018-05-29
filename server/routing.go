@@ -22,51 +22,38 @@ func (s *Server) registerRoutes() http.Handler {
 	r.Use(middleware.RealIP)
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
-//  'nucleus/wallets/%I64d',0
-//  'ofb/purchase/%I64d/%s',0
-//  'nucleus/wallets/%I64d/%s/%d/%s',0
-//  'nucleus/refundAbilities/%I64d',0
-//  'relationships/acknowledge/nucleus:%I64d/%I64d',0
-//  'relationships/acknowledge/server:%s/%I64d',0
-//  'relationships/increase/nucleus:%I64d/nucleus:%I64d/%s',0
-//  'relationships/increase/nucleus:%I64d/server:%s/%s',0
-//  'relationships/increase/server:%s/nucleus:%I64d/%s',0
-//  'relationships/decrease/nucleus:%I64d/nucleus:%I64d/%s',0
-//  'relationships/decrease/nucleus:%I64d/server:%s/%s',0
-//  'relationships/decrease/server:%s/nucleus:%I64d/%s',0
-//  'relationships/status/nucleus:%I64d',0
-//  '<update>',0Ah,0
-//  '</status>',0Ah,0
-//  09h,'<status>',0
-//  '</update>',0
-//  'relationships/status/server:%s',0
-//  '<update>',0Ah,0
-//  '</status>',0Ah,0
-//  09h,'<status>',0
-//  '</name>',0Ah,0
-//  09h,'<name>',0
-//  '</update>',0
-//  'nucleus/personas/%s',0
-//  'relationships/roster/nucleus:%I64d',0
-//  'relationships/roster/server:%s/bvip/1,3',0
-//  'relationships/roster/nucleus:%I64d',0
-//  'relationships/roster/server:%s',0
-// 'user/updateUserProfile/%I64d',0
-//  'nucleus/entitlement/%s/useCount/%d',0
-// : 'nucleus/entitlement/%s/status/%s',0
-// 'user',0
-//  'persona',0
-//  'nucleus/check/%s/%I64d',0
-//  'nucleus/authToken',0
-//  'nucleus/name/%I64d',0
-//  'dc/submit',0
-//  'nucleus/entitlements/%I64d',0
-//  'nucleus/entitlements/%I64d?entitlementTag=%s',0
+	
+//  'nucleus/wallets/%I64d
+//  'ofb/purchase/%I64d/%s
+//  'nucleus/wallets/%I64d/%s/%d/%s
+//  'nucleus/refundAbilities/%I64d
+//  'relationships/acknowledge/nucleus:%I64d/%I64d
+//  'relationships/acknowledge/server:%s/%I64
+//  'relationships/increase/nucleus:%I64d/nucleus:%I64d/%s
+//  'relationships/increase/nucleus:%I64d/server:%s/%s
+//  'relationships/increase/server:%s/nucleus:%I64d/%s
+//  'relationships/decrease/nucleus:%I64d/nucleus:%I64d/%s
+//  'relationships/decrease/nucleus:%I64d/server:%s/%s
+//  'relationships/decrease/server:%s/nucleus:%I64d/%s
+//  'relationships/status/nucleus:%I64d'
+//  'relationships/status/server:%s
+//  'nucleus/personas/%s
+//  'relationships/roster/nucleus:%I64d
+//  'relationships/roster/server:%s/bvip/1,3
+//  'relationships/roster/nucleus:%I64d
+//  'relationships/roster/server:%s
+//  'nucleus/entitlement/%s/useCount/%d
+//  'nucleus/entitlement/%s/status/%s'
+//  'persona
+//  'nucleus/check/%s/%I64d
+//  'nucleus/authToken
+//  'nucleus/name/%I64d'
+//  'nucleus/entitlements/%I64d'
+//  'nucleus/entitlements/%I64d?entitlementTag=%s'
 
 	// TODO: user/updateUserProfile/%d
 	// r.Use(middleware.Timeout(60 * time.Second))
 	// r.Mount("/debug", middleware.Profiler())
-
 
 
 	// Nuclues (authentication and account data)
@@ -85,7 +72,7 @@ func (s *Server) registerRoutes() http.Handler {
 	r.Route("/en/game", game.New(s.rdr).Routing)
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
-		logrus.Warn("Not found URL: ", r.URL.String())
+		logrus.Warn("New Request , check  Dump: ", r.URL.String())
 		logRequest(r)
 		http.NotFound(w, r)
 	})

@@ -6,12 +6,11 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/sirupsen/logrus"
-
-	dc "github.com/Synaxis/Magma/server/handlers-dc"
 	game "github.com/Synaxis/Magma/server/handlers-game"
 	nucleus "github.com/Synaxis/Magma/server/handlers-nucleus"
 	ofb "github.com/Synaxis/Magma/server/handlers-ofb"
 	relationships "github.com/Synaxis/Magma/server/handlers-relationships"
+        dc "github.com/Synaxis/Magma/server/handlers-dc"
 )
 
 func (s *Server) registerRoutes() http.Handler {
@@ -54,22 +53,21 @@ func (s *Server) registerRoutes() http.Handler {
 	// TODO: user/updateUserProfile/%d
 	// r.Use(middleware.Timeout(60 * time.Second))
 	// r.Mount("/debug", middleware.Profiler())
-
-
-	// Nuclues (authentication and account data)
-	r.Route("/relationships", relationships.New(s.rdr).Routing)
-
+	
 	// Client-relationship (i.e. friends, server bookmarks)
 	r.Route("/nucleus", nucleus.New(s.rdr).Routing)
 
+	// Nuclues (authentication and account data)
+	r.Route("/relationships", relationships.New(s.rdr).Routing)	
+
 	// In-game overlay
 	r.Route("/ofb", ofb.New(s.rdr).Routing)
-
+	
+	// Game-client / Upload
+	r.Route("/en/game", game.New(s.rdr).Routing)
+	
 	// Data collection
 	r.Route("/dc", dc.New(s.rdr).Routing)
-
-	// Game-client
-	r.Route("/en/game", game.New(s.rdr).Routing)
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
 		logrus.Warn("New Request , check  Dump: ", r.URL.String())

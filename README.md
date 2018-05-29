@@ -1,6 +1,6 @@
 # MagmaServer
 ``Import Packages are't working , Download and place the repository at your GOPATH
-  like ¨yourGoWorkspace¨/src/github.com/Synaxis/Magma``
+  like              ¨yourGoWorkspace¨/src/github.com/Synaxis/Magma``
 
 MagmaServer handles requests from the game client and server.
 It's used for login/Store/inventoryList/ as parsed XML

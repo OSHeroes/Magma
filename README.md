@@ -6,7 +6,7 @@ MagmaServer handles requests from the game client and server.
 It's used for login/Store/inventoryList/ as parsed XML
 It can be used by both BFHeroes and BFPlay4Free
 ### How to Build
-(remember change your IP inside ./config.go)
+(change your IP inside ./config.go)
 ```
 glide init
 
@@ -34,5 +34,5 @@ touch .env
 All dependencies are resolved with [glide](https://github.com/Masterminds/glide)
 
 ## Credits
-This was created by Synaxis and "neqnil" based on BF2BC backend,
+This is created by Synaxis and "neqnil" based on BF2BC backend,
 credits: mDawg,Makahost

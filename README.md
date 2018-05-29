@@ -16,7 +16,7 @@ go build
 ```
 ## Configuration
 
-Here's a table with the env config variables
+Here's a table with the .env (file) config variables
 Please check ./config.go for more Info
 
 | Name               | Default value   |

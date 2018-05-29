@@ -1,19 +1,22 @@
 # MagmaServer
-``Import Packages are broken at the moment , Download and place the whole folder in your GOPATH
+``Import Packages are't working , Download and place the repository at your GOPATH
   like ¨yourGoWorkspace¨/src/github.com/Synaxis/Magma``
 
-MagmaServer handles REST requests from the game client and server.
-It is another framework used for login/store/inventoryList/XML retrieving and more
+MagmaServer handles requests from the game client and server.
+It's used for login/Store/inventoryList/ as parsed XML
 It can be used by both BFHeroes and BFPlay4Free
-### How to Compile
-```bash
+### How to Build
+(remember change your IP inside ./config.go)
+```
 glide init
+
 glide install
-go build (remember change your IP inside ./config.go)
+
+go build 
 ```
 ## Configuration
 
-Below there is table with the config variables used by the `Magma`.
+Here's a table with the env config variables
 Please check ./config.go for more Info
 
 | Name               | Default value   |
@@ -25,8 +28,8 @@ Please check ./config.go for more Info
 | `PRIVATE_KEY_PATH` | ./fixtures      |
 
 ### Dependencies
-Golang dependencies are resolved with [glide](https://github.com/Masterminds/glide)
+All dependencies are resolved with [glide](https://github.com/Masterminds/glide)
 
 ## Credits
 This was created by Synaxis and "neqnil" based on BF2BC backend,
-credits:the1domo ,freaky123. Aluigi, mDawg,Makahost
+credits: mDawg,Makahost

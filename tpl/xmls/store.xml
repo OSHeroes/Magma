@@ -1,22 +1,83 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<products>
-    <product productId="3169">
-		<status>published</status>
-		<attributes>
-			<attribute name="Product Id" value="3169" />
-			<attribute name="Product Name" value="WEST_Custom_Item_3169" />
-			<attribute name="Short Description" value="WEST_Custom_Item_3169_ShortDesc" />
-			<attribute name="Long Description" value="WEST_Custom_Item_3169_LongDesc" />
-			<attribute name="entitlementTag" value="3169-UNLM-" />
-			<attribute name="groupName" value="BFHPC_Weapon" />
-			<attribute name="duration" value="999" />
-			<attribute name="durationType" value="" />
-			<attribute name="useCount" value="999" />
-			<attribute name="sortKey" value="0" />
-		</attributes>
-		<productName>WEST_Custom_Item_3169</productName>
-		<pricePoints>
-			<pricePoint locale="en_US" priceType="SALE_PRICE" currencyType="VIRTUAL_REWARD" currency="_DV" price="1" startDate="" endDate="" />
-		</pricePoints>
-    </product>
-</products>
+<?xml version="1.0" encoding="UTF-8"?>
+<data studio_domain="DBFH">
+  <categories />
+  <RootNode>
+    <products>
+    <OfferCategory name="Appearance" icon="Appearance.png">
+      <nucleusGroupName>BFHPC_Appearance</nucleusGroupName>
+      <OfferCategory name="Face" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Face</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Head" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Head</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Neck" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Neck</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Accessory" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Accessory</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Body" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Body</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Chest" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Chest</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Hands" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Hands</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Waist" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Waist</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Legs" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Legs</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Feet" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Feet</nucleusGroupName>
+      </OfferCategory>
+    </OfferCategory>
+    <OfferCategory name="Weapons" icon="Weapons.png">
+      <nucleusGroupName>BFHPC_Weapon</nucleusGroupName>
+      <OfferCategory name="Knifes" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Knife</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Pistols" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Pistol</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Rifles" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Rifle</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="SMGs" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_SMG</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="MachineGuns" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_MachineGuns</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Explosives" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_Explosive</nucleusGroupName>
+      </OfferCategory>
+    </OfferCategory>
+    <OfferCategory name="Emotes" icon="Emotes.png">
+      <nucleusGroupName>BFHPC_Emote</nucleusGroupName>
+    </OfferCategory>
+    <OfferCategory name="Abilities" icon="Abilities.png">
+      <nucleusGroupName>BFHPC_Ability</nucleusGroupName>
+    </OfferCategory>
+    <OfferCategory name="Convenience" icon="NewCategory.png">
+      <nucleusGroupName>BFHPC_Convenience</nucleusGroupName>
+      <OfferCategory name="Stats Modifiers" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_StatsModifier</nucleusGroupName>
+      </OfferCategory>
+      <OfferCategory name="Stats Update" icon="NewCategory.png">
+        <nucleusGroupName>BFHPC_StatsUpdate</nucleusGroupName>
+      </OfferCategory>
+    </OfferCategory>
+    <OfferCategory name="Special" icon="NewCategory.png">
+      <nucleusGroupName>BFHPC_Special</nucleusGroupName>
+    </OfferCategory>
+    <OfferCategory name="Bundles" icon="NewCategory.png">
+      <nucleusGroupName>BFHPC_Bundles</nucleusGroupName>
+    </OfferCategory>
+    </RootNode>
+  </products>
+</data>

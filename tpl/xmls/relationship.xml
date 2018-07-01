@@ -1,1 +1,1 @@
-<update><status>Online</status></update>
+<update><id>1</id><name>MargeSimpson</name><state>ACTIVE</state><type>server</type><status>Online</status><realid>{{ .ServerID }}</realid></update>

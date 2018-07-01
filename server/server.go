@@ -50,6 +50,7 @@ func (s *Server) ServeHTTP(bind string, r http.Handler) {
 	go logrus.Error(srv.ListenAndServe())
 }
 
+
 func (s *Server) ServeTLS(bind string, certPath, pemPath string, r http.Handler) {
 	srv := &http.Server{
 		Addr:         bind,

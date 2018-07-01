@@ -6,11 +6,11 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/sirupsen/logrus"
-	game "github.com/Synaxis/Magma/server/handlers-game"
-	nucleus "github.com/Synaxis/Magma/server/handlers-nucleus"
-	ofb "github.com/Synaxis/Magma/server/handlers-ofb"
-	relationships "github.com/Synaxis/Magma/server/handlers-relationships"
-        dc "github.com/Synaxis/Magma/server/handlers-dc"
+	game "github.com/Synaxis/Magma/server/game"
+	nucleus "github.com/Synaxis/Magma/server/nucleus"
+	ofb "github.com/Synaxis/Magma/server/ofb"
+	relationships "github.com/Synaxis/Magma/server/relationships"
+    dc "github.com/Synaxis/Magma/server/dc"
 )
 
 func (s *Server) registerRoutes() http.Handler {

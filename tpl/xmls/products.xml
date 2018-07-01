@@ -1,54 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <products>
-	<product overwrite="false" default_locale="en_US" status="Published" productId="">
-		<status>Published</status>
-		<productId>142</productId>
-		<productName>WEST_Custom_Item_142</productName>
+    <product productId="3169">
+		<status>published</status>
 		<attributes>
-			<attribute value="WEST_Custom_Item_142" name="productName"/>
-			<attribute value="WEST_Custom_Item_142" name="Product Name"/>
-			<attribute value="WEST_Custom_Item_142" name="Long Description"/>
-			<attribute value="WEST_Custom_Item_142" name="Short Description"/>
-			<attribute value="BFHPC_Neck" name="groupName"/>
-			<attribute value="WEST_Custom_Item_142" name="entitlementTag"/>
-			<attribute value="142" name="entitlementId"/>
-			<attribute value="1" name="sortKey"/>
-			<attribute value="1" name="duration" />
-			<attribute value="MONTH" name="durationType"/>
+			<attribute name="Product Id" value="3169" />
+			<attribute name="Product Name" value="WEST_Custom_Item_3169" />
+			<attribute name="Short Description" value="WEST_Custom_Item_3169_ShortDesc" />
+			<attribute name="Long Description" value="WEST_Custom_Item_3169_LongDesc" />
+			<attribute name="entitlementTag" value="3169-UNLM-" />
+			<attribute name="groupName" value="BFHPC_Knife" />
+			<attribute name="duration" value="" />
+			<attribute name="durationType" value="" />
+			<attribute name="useCount" value="" />
+			<attribute name="sortKey" value="0" />
 		</attributes>
-	</product>
-    <product overwrite="false" default_locale="en_US" status="Published" productId="">
-		<status>Published</status>
-		<productId>142</productId>
-		<productName>WEST_Custom_Item_142</productName>
-		<attributes>
-			<attribute value="WEST_Custom_Item_141" name="productName"/>
-			<attribute value="WEST_Custom_Item_141" name="Product Name"/>
-			<attribute value="WEST_Custom_Item_141" name="Long Description"/>
-			<attribute value="WEST_Custom_Item_141" name="Short Description"/>
-			<attribute value="BFHPC_Neck" name="groupName"/>
-			<attribute value="WEST_Custom_Item_141" name="entitlementTag"/>
-			<attribute value="141" name="entitlementId"/>
-			<attribute value="1" name="sortKey"/>
-			<attribute value="1" name="duration" />
-			<attribute value="MONTH" name="durationType"/>
-		</attributes>
-	</product>
-    <product overwrite="false" default_locale="en_US" status="Published" productId="">
-		<status>Published</status>
-		<productId>142</productId>
-		<productName>WEST_Custom_Item_142</productName>
-		<attributes>
-			<attribute value="WEST_Custom_Item_140" name="productName"/>
-			<attribute value="WEST_Custom_Item_140" name="Product Name"/>
-			<attribute value="WEST_Custom_Item_140" name="Long Description"/>
-			<attribute value="WEST_Custom_Item_140" name="Short Description"/>
-			<attribute value="BFHPC_Neck" name="groupName"/>
-			<attribute value="WEST_Custom_Item_140" name="entitlementTag"/>
-			<attribute value="140" name="entitlementId"/>
-			<attribute value="1" name="sortKey"/>
-			<attribute value="1" name="duration" />
-			<attribute value="MONTH" name="durationType"/>
-		</attributes>
-	</product>
+		<productName>WEST_Custom_Item_3169</productName>
+		<pricePoints>
+			<pricePoint locale="en_US" priceType="SALE_PRICE" currencyType="VIRTUAL_REWARD" currency="_DV" price="1" startDate="" endDate="" />
+		</pricePoints>
+    </product>
 </products>

@@ -2,7 +2,6 @@ package tpl
 
 import (
 	"bytes"
-	"encoding/base64"
 	"fmt"
 	"net/http"
 	"text/template"
@@ -12,62 +11,43 @@ import (
 )
 
 const (
-	XmlEntitlements = "entitlements.xml"
-	XmlProducts     = "products.xml"
-	XmlRelationship = "relationship.xml"
-	XmlSession      = "session.xml"
-	XmlSessionNew   = "session_new.xml"
-	XmlStore        = "store.xml"
-	XmlWallets      = "wallets.xml"
+	Entitlements = "entitlements.xml"
+	Products     = "products.xml"
+	Relationship = "relationship.xml"
+	Session      = "session.xml"
+	SessionNew   = "session_new.xml"
+	Store        = "store.xml"
+	Wallets      = "wallets.xml"
+	check        = "check.xml"
 )
 
 type Renderer struct {
 	tpl *template.Template
 }
 
-func NewRenderer() (*Renderer, error) {
-	tmpl, err := template.New("noop").Parse(``)
-	if err != nil {
-		return nil, err
-	}
-
-	err = parseTemplates(
-		tmpl,
-		bindataTemplates(),
-		XmlEntitlements,
-		XmlProducts,
-		XmlRelationship,
-		XmlSessionNew,
-		XmlSession,
-		XmlWallets,
-		XmlStore,
+func newRenderer() Renderer {
+	tpl := template.Must(
+		template.ParseFiles(
+			addPathPrefix(
+				Entitlements,
+				Products,
+				Relationship,
+				SessionNew,
+				Session,
+				Wallets,
+				Store,
+			)...,
+		),
 	)
-	if err != nil {
-		return nil, err
-	}
-
-	return &Renderer{tmpl}, nil
+	return Renderer{tpl}
 }
 
-func parseTemplates(tmpl *template.Template, templates map[string]string, filenames ...string) error {
-	for _, filename := range filenames {
-		encoded, ok := templates[filename]
-		if !ok {
-			return fmt.Errorf("renderer: Cannot find template '%s'", filename)
-		}
-
-		bys, err := base64.StdEncoding.DecodeString(encoded)
-		if err != nil {
-			return fmt.Errorf("renderer: Cannot decode template '%s'", filename)
-		}
-
-		_, err = tmpl.New(filename).Parse(string(bys))
-		if err != nil {
-			return fmt.Errorf("renderer: Cannot parse template '%s'", filename)
-		}
+func addPathPrefix(path ...string) []string {
+	prefixed := []string{}
+	for _, p := range path {
+		prefixed = append(prefixed, fmt.Sprintf("server/tpl/%s", p))
 	}
-
-	return nil
+	return prefixed
 }
 
 func (rdr *Renderer) RenderXML(w http.ResponseWriter, r *http.Request, name string, data interface{}) {
@@ -78,7 +58,7 @@ func (rdr *Renderer) RenderXML(w http.ResponseWriter, r *http.Request, name stri
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	// logrus.Info("Response", buf.String())
+	logrus.Info("Response\n", buf.String())
 	respondXML(w, r, buf.Bytes())
 }
 
@@ -87,5 +67,6 @@ func respondXML(w http.ResponseWriter, r *http.Request, v []byte) {
 	if status, ok := r.Context().Value(render.StatusCtxKey).(int); ok {
 		w.WriteHeader(status)
 	}
+	logrus.Println("->Answer : ")
 	w.Write(v)
 }

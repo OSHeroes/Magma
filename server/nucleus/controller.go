@@ -36,8 +36,7 @@ func (s *Controller) Routing(r chi.Router) {
 	r.Get("/wallets/{heroID}", s.walletsHandler)
 
 	// TODO: /check/%s/%d
-	// r.Get("/check/user/{userID}", s.nucleusCheckUser)
-
+	r.Get("/check/user/{userID}", s.nucleusCheckUser)
 	// TODO: /personas/%s
 	// TODO: /refundAbilities/%d
 	// TODO: /personas/%s

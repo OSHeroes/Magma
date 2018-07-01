@@ -3,7 +3,7 @@
   <entitlement>
     <entitlementId>1</entitlementId>
 		<entitlementTag>[3169]-UNLM-</entitlementTag>
-    <useCount>0</useCount>
+    <useCount>999</useCount>
     <userId>{{ .HeroID }}</userId>
   </entitlement> 
 </entitlements>

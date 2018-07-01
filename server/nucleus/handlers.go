@@ -3,9 +3,10 @@ package nucleus
 import (
 	"net/http"
 
-	"github.com/go-chi/chi"
 	"github.com/Synaxis/Magma/server/auth"
+	"github.com/Synaxis/Magma/server/servertest"
 	"github.com/Synaxis/Magma/tpl"
+	"github.com/go-chi/chi"
 )
 
 type dtSession struct {
@@ -38,7 +39,7 @@ func (s *Controller) nucleusAuthToken(w http.ResponseWriter, r *http.Request) {
 // 		http.MethodGet,
 // 		ts.URL+`/nucleus/check/user/`+nucleusID,
 // 		nil,
-// 	)	
+// 	)
 // }
 
 type dtHero struct {
@@ -51,4 +52,33 @@ func (s *Controller) nucleusEntitlements(w http.ResponseWriter, r *http.Request)
 
 func (s *Controller) walletsHandler(w http.ResponseWriter, r *http.Request) {
 	s.rdr.RenderXML(w, r, tpl.XmlWallets, nil)
+}
+
+func (s *Controller) nucleusCheckUser(w http.ResponseWriter, r *http.Request) {
+	userID := chi.URLParam("userID")
+
+	ts := servertest.StartTestServer()
+	defer ts.Close()
+
+	req, _ := http.NewRequest(
+		http.MethodGet,
+		ts.URL+`/nucleus/check/user/`+userID,
+		nil,
+	)
+	servertest.SetCommonTestHeaders(req)
+	servertest.AddTestGameClientHeaders(req)
+
+	res, _ := ts.Client().Do(req)
+
+	t.Log(res)
+
+	req, _ := http.NewRequest(
+		http.MethodGet,
+		ts.URL+`/nucleus/check/user/`+heroID,
+		nil,
+	)
+}
+
+func (s *Controller) nucleusCheckUser(w http.ResponseWriter, r *http.Request) {
+	// userID := chi.URLParam("userID")
 }
